@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="./styles/stylesheet.css">
+    <title>Produce 2020 | Search</title>
+  </head>
+
+  <body>
+    <div id="farm-search"> 
+      <div id="farm-search-filter" class = "farm-search-filter">
+        <div class="filter-item" id = "filter1">
+          <h2 class="filter-title">When do I want to go? </h2>
+          <label for="date">Select your date:</label>
+          <input type="date" id="date" name="purchase-date"><br>
+          <div class="btn-container">
+            <button type="button" id = "date-next-btn" class="btn next-btn">Next</button>
+          </div>
+        </div>
+        <div class="filter-item hide" id = "filter2">
+          <h2 class="filter-title">What do I want to buy?</h2>
+          <h4 class="filter-fruits">Fruits</h4>
+          <div class="check-box p-curve">
+            <input type="checkbox" name="farmFruits" value="Apples">
+            <label for="fruits"> Apples</label>
+            <input type="checkbox" name="farmFruits" value="Blueberries">
+            <label for="fruits"> Blueberries</label>
+            <input type="checkbox" name="farmFruits" value="Cantaloupes">
+            <label for="fruits"> Cantaloupes</label>
+            <input type="checkbox" name="farmFruits" value="Cantaloupes">
+            <label for="fruits"> Cantaloupes</label>
+            <input type="checkbox" name="farmFruits" value="Cranberries">
+            <label for="fruits"> Cranberries</label>
+            <input type="checkbox" name="farmFruits" value="Peaches">
+            <label for="fruits"> Peaches</label>
+            <input type="checkbox" name="farmFruits" value="Pears">
+            <label for="fruits"> Pears</label>
+            <input type="checkbox" name="farmFruits" value="Raspberries">
+            <label for="fruits"> Raspberries</label>
+            <input type="checkbox" name="farmFruits" value="Strawberries">
+            <label for="fruits"> Strawberries</label>
+            <input type="checkbox" name="farmFruits" value="Watermelons">
+            <label for="fruits"> Watermelons</label>
+          </div>
+          <div class="btn-container">
+            <button type="button" id = "fruits-next-btn" class="btn next-btn">Next</button>
+          </div>
+        </div>
+        <div class="filter-item hide" id = "filter3">
+          <h2 class="filter-title">What do I want to buy?</h2>
+          <h4 class="filter-vegetables">Vegetables</h4>
+          <div class="check-box p-curve">
+            <input type="checkbox" name="farmVegetables" value="Asparagus">
+            <label for="vegetables"> Asparagus</label>
+            <input type="checkbox" name="farmVegetables" value="Corns">
+            <label for="vegetables"> Corns</label>
+            <input type="checkbox" name="farmVegetables" value="Cucumbers">
+            <label for="vegetables"> Cucumbers</label>
+            <input type="checkbox" name="farmVegetables" value="Mung Beans">
+            <label for="vegetables"> Mung Beans</label>
+            <input type="checkbox" name="farmVegetables" value="Mushrooms">
+            <label for="vegetables"> Mushrooms</label>
+            <input type="checkbox" name="farmVegetables" value="Potatoes">
+            <label for="vegetables"> Potatoes</label>
+            <input type="checkbox" name="farmVegetables" value="Pumpkins">
+            <label for="vegetables"> Pumpkins</label>
+            <input type="checkbox" name="farmVegetables" value="Radishes">
+            <label for="vegetables"> Radishes</label>
+            <input type="checkbox" name="farmVegetables" value="Spinach">
+            <label for="vegetables"> Spinach</label>
+            <input type="checkbox" name="farmVegetables" value="Sprouts">
+            <label for="vegetables"> Sprouts</label>
+            <input type="checkbox" name="farmVegetables" value="Tomatoes">
+            <label for="vegetables"> Tomatoes</label>
+          </div>
+          <div class="btn-container">
+            <button type="button" id = "vegetables-next-btn" class="btn next-btn">Go!</button>
+          </div>
+        </div>
+      </div>
+      <div class="farm-search-result hide" id = "farm-search-result">
+        <div id="search-result-text">
+        <div class="result-headline" id = "result-headline">
+          <h2>Check where you can go :</h2> 
+        </div>
+        <div id = "reminder1" class = "hide">
+          <h5>Sorry, we can't find a result</h5></div>
+        <div class = "btn-container" id="result-page-btn">
+          <button type = "button" onClick="window.location.reload();" class = "btn home-page-btn">Reset filter</button>
+          <a id = "back-to-home-btn" class="btn home-page-btn" href="index.html">Back to homepage</a>
+        </div>
+        <div id ="reminder2" class="hide">
+          <h3>You might be interested in these farms and markets:</h3>
+        </div>
+      </div>
+      <div class="farm-result-container">
+        <div id = "farm-result">
+        </div>
+      </div>
+      </div>
+    <script src="./scripts/farmsearch.js"></script>
+  </body>
+
+</html>

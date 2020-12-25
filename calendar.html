@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Produce 2020 | Produce Calendar</title>
+    
+  </head>
+  <body class="container calendar-page">
+    <section class="calendar-section">
+      <div id="calendar-title">
+        <h3>Massachusetts-Grown Produce Availability Calendar</h3>
+      </div>
+      <div class="fruit-display">
+        <!-- carousal -->
+        <div class="swiper-container">
+          <ul class="swiper-wrapper">
+          </ul>
+        </div>
+        <div class="control-bar">
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Control bar -->
+          <div class="glide__arrows">
+            <div class="swiper-button-next glide__arrow-right"></div>
+            <div class="swiper-button-prev glide__arrow-left"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- calendar month -->
+    <aside class="calendar-months">
+      <ul class="months">
+        <li ><label >
+          <input id="jan" type="radio" value="January" name="input-month" onclick="clickMonth()" checked>
+          <span class="month">January</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="February" name="input-month" onclick="clickMonth()">
+          <span class="month">February</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="March" name="input-month" onclick="clickMonth()">
+          <span class="month">March</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="April" name="input-month" onclick="clickMonth()">
+          <span class="month">April</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="May" name="input-month" onclick="clickMonth()">
+          <span class="month">May</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="June" name="input-month" onclick="clickMonth()">
+          <span class="month">June</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="July" name="input-month" onclick="clickMonth()">
+          <span class="month">July</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="August" name="input-month" onclick="clickMonth()">
+          <span class="month">August</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="September" name="input-month" onclick="clickMonth()">
+          <span class="month">September</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="October" name="input-month" onclick="clickMonth()">
+          <span class="month">October</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="November" name="input-month" onclick="clickMonth()">
+          <span class="month">November</span>
+        </label></li>
+        <li ><label>
+          <input type="radio" value="December" name="input-month" onclick="clickMonth()">
+          <span class="month">December</span>
+        </label></li>
+        <li>
+          <a type = "button" id="calendar-back-home" class="btn" href="index.html">Home</a>
+        </li>
+      </ul>
+    </aside>
+    
+    <script src="./scripts/calendar.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
+    <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+        observer: true,
+        observeParents: true,
+        direction: 'horizontal',
+        // slidesPerView: 3,
+        // spaceBetween: 50,
+        freeMode: false,
+        loopFillGroupWithBlank: true,
+        loop: false,
+        
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        
+        breakpoints: {
+          0: { /* when window >=0px  */
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          767: { /* when window >= 767px */
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          988: { /* when window >= 988px  */
+            slidesPerView: 3,
+            spaceBetween: 50,
+            slidesPerGroup: 3,
+          }
+        },
+        
+      })
+      </script>
+  </body>
+  
+  
+</html>
